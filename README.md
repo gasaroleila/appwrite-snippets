@@ -1,1 +1,1 @@
-# react-appwrite-snippets
+# appwrite-snippets
