@@ -1,0 +1,34 @@
+{
+  "name": "appwrite-snippets",
+  "displayName": "Appwrite Snippets",
+  "description": "Appwrite Snippets is a collection snippets and shortcuts of commonly used Appwrite APIs ",
+  "version": "0.0.1",
+  "icon": "logo.png",
+  "publisher": "Leila & Aime",
+  "engines": {
+    "vscode": "^1.64.0"
+  },
+  "keywords": [
+    "JavaScript",
+    "React",
+    "Vue",
+    "Appwrite",
+    "Angular",
+    "Svelte",
+    "Dart",
+    "Flutter",
+    "Android",
+    "react-native",
+  ],
+  "categories": [
+    "Snippets"
+  ],
+  "homepage": "https://github.com/gasaroleila/appwrite-snippets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gasaroleila/appwrite-snippets.git"
+  },
+  "scripts": {
+  "deploy": "vsce publish --yarn"
+},
+}
