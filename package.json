@@ -35,24 +35,24 @@
 "contributes": {
   "snippets": [
     {
-      "scope": "*",
-      "path": "./snippets/client.code-snippets"
+      "scope": "javascript,typescript,dart",
+      "path": "./snippets/web-SDK/client.code-snippets"
     },
     {
       "scope": "javascript,typescript,dart",
-      "path": "./snippets/account.code-snippets"
+      "path": "./snippets/web-SDK/account.code-snippets"
     },
     {
       "scope": "javascript,typescript,dart",
-      "path": "./snippets/database.code-snippets"
+      "path": "./snippets/web-SDK/database.code-snippets"
     },
     {
       "scope": "javascript,typescript,dart",
-      "path": "./snippets/storage.code-snippets"
+      "path": "./snippets/web-SDK/storage.code-snippets"
     },
     {
       "scope": "javascript,typescript,dart",
-      "path": "./snippets/teams.code-snippets"
+      "path": "./snippets/web-SDK/teams.code-snippets"
     }
   ]
 }

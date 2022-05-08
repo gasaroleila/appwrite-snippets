@@ -1,0 +1,19 @@
+{
+  
+    "Create Appwrite Sdk": {
+      "prefix": ["as"],
+      "body": ["const sdk = new Appwrite();"],
+      "description": "Initialize Appwrite Instance."
+    },
+  
+    "Set Sdk Properties": {
+      "prefix": ["asp"],
+      "body": [
+        "sdk",
+            ".setEndpoint('${1: Your API Endpoint}')",
+            ".setProject('${2: Your project ID }')",
+        ";"
+        ],
+      "description": "Add your sdk properties"
+    },
+}
