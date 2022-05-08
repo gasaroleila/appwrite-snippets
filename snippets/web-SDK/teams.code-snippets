@@ -1,73 +1,67 @@
 {
-  "Initialize Team": {
-    "prefix": ["team"],
-    "body": ["final Team team = Team(client);"],
-    "description": "Create a Team object and initialize it."
-  },
-
   "Create Team": {
-    "prefix": ["createTeam", "crTeam"],
-    "body": ["final response = await team.create(teamId: '$1' ,name: '$2');"],
+    "prefix": ["at"],
+    "body": ["let response = await sdk.teams.create('${1: TEAM_ID}' ,'${2: TEAM_NAME}');"],
     "description": "Create a new Team."
   },
 
   "List Teams": {
-    "prefix": ["listTeams", "listTeams"],
-    "body": ["final response = await team.list();"],
+    "prefix": ["lt"],
+    "body": ["let response = await sdk.teams.list();"],
     "description": "Get a list of all the user teams. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's teams."
   },
 
   "Get Team": {
-    "prefix": ["getTeam", "getTeam"],
-    "body": ["final response = await team.get(teamId: '$1');"],
+    "prefix": ["gt"],
+    "body": ["let response = await sdk.teams.get('${1: TEAM_ID}');"],
     "description": "Get a team by its unique ID."
   },
 
   "Update Team": {
-    "prefix": ["updateTeam", "updateTeam"],
-    "body": ["final response = await team.update(teamId: '$1', name: '$2');"],
+    "prefix": ["ut"],
+    "body": ["let response = await sdk.teams.update('${1: TEAM_ID}','${2: TEAM_NAME}');"],
     "description": "Update a team by its unique ID."
   },
 
   "Delete Team": {
-    "prefix": ["deleteTeam", "deleteTeam"],
-    "body": ["await team.delete(teamId: '$1');"],
+    "prefix": ["dt"],
+    "body": ["await sdk.teams.delete('${1: TEAM_ID}');"],
     "description": "Delete a team by its unique ID."
   },
 
   "Create Team Membership": {
-    "prefix": ["createTeamMembership", "crTeamMembership"],
+    "prefix": ["atm"],
     "body": [
-      "final response = await team.createMembership(teamId: '$1', email: '$2',roles: [$3], url: '$4');"
+      "let response = await sdk.teams.createMembership('${1: TEAM_ID}','${2: EMAIL}',[${3: ROLES}], '${4: REDIRECT_URL}');"
     ],
     "description": "Create a new Team Membership."
   },
 
   "Get Team Membership": {
-    "prefix": ["getTeamMembership", "getTeamMembership"],
-    "body": ["final response = await team.getMembership(teamId: '$1');"],
+    "prefix": ["gtm"],
+    "body": ["let response = await sdk.teams.getMembership('${1: TEAM_ID}');"],
     "description": "Get a team membership by its unique ID."
   },
 
   "Update Team Membership Roles": {
-    "prefix": ["updateTeamMembershiproles"],
+    "prefix": ["utmr"],
     "body": [
-      "final response = await team.updateMembershipRoles(teamId: '$1', membershipId: '$2',roles: [$3]);"
+      "let response = await sdk.teams.updateMembershipRoles('${1: TEAM_ID}', '${2: MEMBERSHIP_ID}',[${3: ROLES}]);"
     ],
     "description": "Update a team membership by its unique ID."
   },
 
   "Update Team Membership status": {
-    "prefix": ["updateTeamMembershipstatus"],
+    "prefix": ["utms"],
     "body": [
-      "final response = await team.updateMembershipStatus(teamId: '$1', membershipId: '$2', userId: '$3', secret: '$4');"
+      "let response = await sdk.teams.updateMembershipStatus('${1: TEAM_ID}', '${2: MEMBERSHIP_ID}', '${3: USER_ID}', '${4: SECRET}');"
     ],
     "description": "Update a team membership by its unique ID."
   },
 
   "Delete Team Membership": {
-    "prefix": ["deleteTeamMembership", "deleteTeamMembership"],
-    "body": ["await team.deleteMembership(teamId: '$1', membershipId: '$2');"],
+    "prefix": ["dtm"],
+    "body": ["await sdk.teams.deleteMembership('${1: TEAM_ID}', '${2: MEMBERSHIP_ID}');"],
     "description": "Delete a team membership by its unique ID."
   }
 }
