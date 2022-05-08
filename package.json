@@ -18,7 +18,7 @@
     "Dart",
     "Flutter",
     "Android",
-    "react-native",
+    "react-native"
   ],
   "categories": [
     "Snippets"
@@ -31,4 +31,29 @@
   "scripts": {
   "deploy": "vsce publish --yarn"
 },
+
+"contributes": {
+  "snippets": [
+    {
+      "scope": "*",
+      "path": "./snippets/client.code-snippets"
+    },
+    {
+      "scope": "javascript,typescript,dart",
+      "path": "./snippets/account.code-snippets"
+    },
+    {
+      "scope": "javascript,typescript,dart",
+      "path": "./snippets/database.code-snippets"
+    },
+    {
+      "scope": "javascript,typescript,dart",
+      "path": "./snippets/storage.code-snippets"
+    },
+    {
+      "scope": "javascript,typescript,dart",
+      "path": "./snippets/teams.code-snippets"
+    }
+  ]
+}
 }
