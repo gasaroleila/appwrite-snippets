@@ -34,10 +34,10 @@
       "createSession",
     ],
     "body": [
-        "Future session = await account.createSession(",
+        "Future session = account.createSession(",
         "email: 'email@example.com',",
         "password: 'password',",
-        "",
+        ");",
     ],
     "description": "Create a new Account Session"
   },
