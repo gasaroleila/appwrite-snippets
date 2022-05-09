@@ -29,31 +29,34 @@
     "url": "https://github.com/gasaroleila/appwrite-snippets.git"
   },
   "scripts": {
-  "deploy": "vsce publish --yarn"
-},
-
-"contributes": {
-  "snippets": [
-    {
-      "scope": "javascript,typescript,dart",
-      "path": "./snippets/web-SDK/client.code-snippets"
-    },
-    {
-      "scope": "javascript,typescript,dart",
-      "path": "./snippets/web-SDK/account.code-snippets"
-    },
-    {
-      "scope": "javascript,typescript,dart",
-      "path": "./snippets/web-SDK/database.code-snippets"
-    },
-    {
-      "scope": "javascript,typescript,dart",
-      "path": "./snippets/web-SDK/storage.code-snippets"
-    },
-    {
-      "scope": "javascript,typescript,dart",
-      "path": "./snippets/web-SDK/teams.code-snippets"
-    }
-  ]
-}
+    "deploy": "vsce publish --yarn"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "scope": "javascript,typescript,dart",
+        "path": "./snippets/client-sdks/web/client.code-snippets"
+      },
+      {
+        "scope": "javascript,typescript,dart",
+        "path": "./snippets/client-sdks/web/account.code-snippets"
+      },
+      {
+        "scope": "javascript,typescript,dart",
+        "path": "./snippets/client-sdks/web/database.code-snippets"
+      },
+      {
+        "scope": "javascript,typescript,dart",
+        "path": "./snippets/client-sdks/web/storage.code-snippets"
+      },
+      {
+        "scope": "javascript,typescript,dart",
+        "path": "./snippets/client-sdks/web/teams.code-snippets"
+      },
+      {
+        "scope": "dart",
+        "path": "./snippets/client-sdks/flutter/account.code-snippets"
+      }
+    ]
+  }
 }
