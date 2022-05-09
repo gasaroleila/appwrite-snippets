@@ -56,6 +56,10 @@
       {
         "scope": "dart",
         "path": "./snippets/client-sdks/flutter/account.code-snippets"
+      },
+      {
+        "scope": "dart",
+        "path": "./snippets/client-sdks/flutter/client.code-snippets"
       }
     ]
   }

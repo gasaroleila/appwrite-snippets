@@ -1,7 +1,6 @@
 {
   "Add a Client": {
-    "scope": "dart",
-    "prefix": "client",
+    "prefix": ["afc","client"],
     "body": [
       "final Client client = Client()",
       "\t.setEndpoint('$1')",
@@ -12,8 +11,7 @@
   },
 
   "Add a Dart Client": {
-    "scope": "dart",
-    "prefix": "dartclient",
+    "prefix": ["afdc","dartclient"],
     "body": [
       "final Client client = Client()",
       "\t.setEndpoint($1)",
