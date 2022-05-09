@@ -2,27 +2,11 @@
   "Create account": {
     "prefix": ["afca", "flutterCreateAccount"],
     "body": [
-      "Client client = Client();",
-      "Account account = Account(client);",
-      "",
-      "client",
-      ".setEndpoint('${1: Your API Endpoint}')",
-      ".setProject('${2: Your project ID }')",
-      ";",
-      "",
       "Future result = account.create(",
       "userId: '[USER_ID]',",
       "email: 'email@example.com',",
       "password: 'password',",
       ");",
-      "",
-      "",
-      "result",
-      ".then((result) {",
-      "     print(result);",
-      "}).catchError((error) {",
-      "     print(error.result);",
-      " });"
     ],
     "description": "Create a new Account"
   },

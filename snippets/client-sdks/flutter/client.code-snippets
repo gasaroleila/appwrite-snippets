@@ -3,9 +3,8 @@
     "prefix": ["afc","client"],
     "body": [
       "final Client client = Client()",
-      "\t.setEndpoint('$1')",
-      "\t.setProject('$2')",
-      "\t.setSelfSigned('${3: STATUS}');"
+      "\t.setEndpoint('${1: YOUR_ENDPOINT}')",
+      "\t.setProject('${2: YOUR_PROJECT_ID}')",
     ],
     "description": "Create a Client object and initialize it."
   },
@@ -16,7 +15,6 @@
       "final Client client = Client()",
       "\t.setEndpoint($1)",
       "\t.setProject($2)",
-      "\t.setJWT('$3');"
     ],
     "description": "Create a dart Client object and initialize it."
   }
