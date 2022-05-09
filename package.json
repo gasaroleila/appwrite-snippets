@@ -60,6 +60,14 @@
       {
         "scope": "dart",
         "path": "./snippets/client-sdks/flutter/client.code-snippets"
+      },
+      {
+        "scope": "dart",
+        "path": "./snippets/client-sdks/flutter/storage.code-snippets"
+      },
+      {
+        "scope": "dart",
+        "path": "./snippets/client-sdks/flutter/database.code-snippets"
       }
     ]
   }
