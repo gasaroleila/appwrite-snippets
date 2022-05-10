@@ -9,19 +9,9 @@
     "vscode": "^1.64.0"
   },
   "keywords": [
-    "Appwrite intellisense",
-    "firebase",
-    "firestore",
-    "JavaScript",
-    "React",
-    "Vue",
-    "Appwrite",
-    "Angular",
-    "Svelte",
-    "Dart",
-    "Flutter",
-    "Android",
-    "react-native"
+    "appwrite snippets",
+    "appwrite intellisense",
+    "appwrite"
   ],
   "categories": [
     "Snippets"
