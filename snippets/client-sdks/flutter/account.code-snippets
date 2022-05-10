@@ -38,7 +38,7 @@
 
   "Create Magic Url session": {
     "prefix": [
-      "amus",
+      "afmus",
       "createSessionAccount",
       "magicUrl",
       "mgURLSession"
@@ -52,7 +52,7 @@
     "description": "Create a new account session with Magic Url"
   },
   "Create Magic URL session (confirmation)": {
-    "prefix": ["amusc", "confirmMagicUrl", "mgURLSessionConfirmation"],
+    "prefix": ["afmusc", "confirmMagicUrl", "mgURLSessionConfirmation"],
     "body": [
         "Future result = account.createMagicURLSession(",
         "userId: '${1: USER_ID}',",
@@ -63,61 +63,61 @@
   },
 
   "Create Anonymous session": {
-    "prefix": ["aas", "AnonymousSession", "createAnonymousSession"],
+    "prefix": ["afas", "AnonymousSession", "createAnonymousSession"],
     "body": ["Future result = account.createAnonymousSession();"],
     "description": "Create a new Anonymous Session"
   },
 
   "Create Account JWT": {
-    "prefix": ["aajwt", "aaj"],
+    "prefix": ["afajwt", "aaj"],
     "body": ["Future result = await account.createJWT();"],
     "description": "Create a new Account using JWT"
   },
 
   "Get Account": {
-    "prefix": ["agc","getAccount"],
+    "prefix": ["afgc","getAccount"],
     "body": ["Future result = account.get();"],
     "description": "Get currently logged in user data as JSON object."
   },
 
   "Get Account Preferences": {
-    "prefix": ["aap","getAccountPreferences"],
+    "prefix": ["afap","getAccountPreferences"],
     "body": ["Future result = account.getPrefs();"],
     "description": "Get currently logged in user preferences as a key-value object."
   },
 
   "Get Account Sessions": {
-    "prefix": ["aas","getAccountSession"],
+    "prefix": ["afas","getAccountSession"],
     "body": ["Future result = account.getSessions();"],
     "description": "Get currently logged in user list of active sessions across different devices."
   },
 
   "Get Account Logs": {
-    "prefix": ["aal","getAccountLogs"],
+    "prefix": ["afal","getAccountLogs"],
     "body": ["Future result = account.getLogs();"],
     "description": "Get currently logged in user list of latest security activity logs. Each log returns user IP address, location and date and time of log."
   },
 
   "Get Session by ID": {
-    "prefix": ["asbi","getSessionId", "getSessionbyId"],
+    "prefix": ["afsbi","getSessionId", "getSessionbyId"],
     "body": ["Future result = account.getSesssion(sessionId: '${1: SESSION_ID}');"],
     "description": "Use this endpoint to get a logged in user's session using a Session ID. Inputting 'current' will return the current session being used."
   },
 
   "Update Account Name": {
-    "prefix": ["auan","updateName", "upName"],
+    "prefix": ["afuan","updateName", "upName"],
     "body": ["Future result = account.updateName(name: '${1: NAME}');"],
     "description": "Update currently logged in user account name."
   },
 
   "Update Account Password": {
-    "prefix": ["auap","updatePassword"],
+    "prefix": ["afuap","updatePassword"],
     "body": ["Future result = account.updatePassword(password: '${1: PASSWORD}');"],
     "description": "Update currently logged in user password. For validation, user is required to pass in the new password, and the old password. For users created with OAuth and Team Invites, oldPassword is optional."
   },
 
   "Update Account Email": {
-    "prefix": ["uae","updateEmail"],
+    "prefix": ["fuae","updateEmail"],
     "body": [
       "Future result = account.updateEnail(email: '${1: EMAIL}', password: '${2: PASSWORD}');"
     ],
@@ -125,31 +125,31 @@
   },
 
   "Update Account Preferences": {
-    "prefix": ["auap","updatePreferences"],
+    "prefix": ["afuap","updatePreferences"],
     "body": ["Future result = account.updatePrefs(prefs: {${1: PREFERENCES}});"],
     "description": "Update currently logged in user account preferences. The object you pass is stored as is, and replaces any previous value. The maximum allowed prefs size is 64kB and throws error if exceeded."
   },
 
   "Delete Account": {
-    "prefix": ["ada","deleteAccount", "delAcc"],
+    "prefix": ["afda","deleteAccount", "delAcc"],
     "body": ["Future result = account.delete();"],
     "description": "Delete a currently logged in user account. Behind the scene, the user record is not deleted but permanently blocked from any access. This is done to avoid deleted accounts being overtaken by new users with the same email address. Any user-related resources like documents or storage files should be deleted separately."
   },
 
   "Delete Account Session": {
-    "prefix": ["adas","deleteAccountSession", "delAccSession"],
+    "prefix": ["afdas","deleteAccountSession", "delAccSession"],
     "body": ["Future result =  account.deleteSession(sessionId: '${1: SESSION_ID}');"],
     "description": "Use this endpoint to log out the currently logged in user from all their account sessions across all of their different devices. When using the option id argument, only the session unique ID provider will be deleted."
   },
 
   "Delete All Account Sessions": {
-    "prefix": ["adaas","deleteAccountSessions"],
+    "prefix": ["afdaas","deleteAccountSessions"],
     "body": ["Future result = account.deleteSessions();"],
     "description": "Delete all sessions from the user account and remove any sessions cookies from the end client."
   },
 
   "Create Password Recovery": {
-    "prefix": ["cpr","recPassword", "crRecovery"],
+    "prefix": ["fcpr","recPassword", "crRecovery"],
     "body": [
       "Future result = account.createRecovery(email: '${1: USER_EMAIL}', url:'${2: PASSWORD_RESET_URL}');"
     ],
@@ -157,7 +157,7 @@
   },
 
   "Create Password Recovery(confirmation)": {
-    "prefix": ["acprc","upRecovery", "updateRecovery"],
+    "prefix": ["afcprc","upRecovery", "updateRecovery"],
     "body": [
       "Future result = account.updateRecovery(userId: '${1: USER_ID}', secret:'${2: SECRET}',password: '${3: USER_PASSWORD}',passwordAgain:'${4: CONFIRM_PASSWORD}');"
     ],
@@ -165,13 +165,13 @@
   },
 
   "Create Email Verification": {
-    "prefix": ["acev","emailVerification"],
+    "prefix": ["afcev","emailVerification"],
     "body": ["Future result = account.createVerification(url: '${1: VERIFICATION_URL}');"],
     "description": "Use this endpoint to send a verification message to your user email address to confirm they are the valid owners of that address. Both the userId and secret arguments will be passed as query parameters to the URL you have provided to be attached to the verification email. The provided URL should redirect the user back to your app and allow you to complete the verification process by verifying both the userId and secret parameters. Learn more about how to complete the verification process. The verification link sent to the user's email address is valid for 7 days."
   },
 
   "Create Email Verification(confirmation)": {
-    "prefix": ["acevc","emailVerificationconfirmation"],
+    "prefix": ["afcevc","emailVerificationconfirmation"],
     "body": [
       "Future result = account.updateVerification(userId: '${1: USER_ID}',secret: '${2: SECRET}');"
     ],

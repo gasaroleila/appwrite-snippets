@@ -1,40 +1,43 @@
 {
   "Initialize Document": {
-    "prefix": ["", "document"],
+    "prefix": ["aid", "finitDocument"],
     "body": [
       "Client client = Client();",
-      "Database document = Database(client);",
+      "Database database = Database(client);",
       ""
     ],
     "description": "Create a Document object and initialize it."
   },
 
   "Create Document": {
-    "prefix": ["ad", "createDocument"],
+    "prefix": ["afd", "fcreateDocument"],
     "body": [
-      "Future result = database.createDocument(collection: '$1', documentId: '$2');"
+      "Future result = database.createDocument(collection: '${1: COLLECTION_ID}', documentId: '${2: DOCUMENT_ID}');"
     ],
     "description": "Create a new Document. Before using this route, you should create a new collection resource using either a server integration API or directly from your database console."
   },
 
   "List Document": {
-    "prefix": ["ald", "listDocument", "listDocuments"],
-    "body": ["Future result = database.listDocuments(collectionId: '$1');"],
+    "prefix": ["afld", "flistDocument", "flistDocuments"],
+    "body": ["Future result = database.listDocuments(collectionId: '${1: COLLECTION_ID}');"],
     "description": "Get a list of all the user documents. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's documents."
   },
 
   "Update Document": {
-    "prefix": ["aud", "updateDocument"],
+    "prefix": ["afud", "fupdateDocument"],
     "body": [
-      "Future result = database.updateDocument(collectionId: '$1',documentId: `$2`, data: {$3});"
+      "Future result = database.updateDocument(collectionId: '${1: COLLECTION_ID}',documentId: `${2: DOCUMENT_ID}`, data: {${3: DATA}});"
     ],
     "description": "Update a document by its unique ID. Using the patch method you can pass only specific fields that will get updated."
   },
 
   "Delete Document": {
-    "prefix": ["add", "deleteDocument"],
+    "prefix": ["afdd", "fdeleteDocument"],
     "body": [
-      "await database.deleteDocument(collectionId: '$1', documentId: '$2');"
+      " Future result = database.deleteDocument(",
+     " collectionId: '${1: COLLECTION_ID},'",
+      "documentId: '{2: DOCUMENT_ID}'",
+    ");"
     ],
     "description": "Delete a document by its unique ID. This endpoint deletes only the parent documents, its attributes and relations to other documents. Child documents will not be deleted."
   }

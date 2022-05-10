@@ -1,7 +1,7 @@
 {
  
   "Create Document": {
-    "prefix": ["ad"],
+    "prefix": ["ad", "createDocument"],
     "body": [
       "let response = await sdk.database.createDocument('${1: COLLECTION_ID}', '${2: DOCUMENT_ID}');"
     ],
@@ -9,7 +9,7 @@
   },
 
   "List Document": {
-    "prefix": ["lds"],
+    "prefix": ["lds","listDocument", "listDocuments"],
     "body": [
       "let response = await sdk.database.listDocuments('${1: COLLECTION_ID}');"
     ],
@@ -17,7 +17,7 @@
   },
 
   "Update Document": {
-    "prefix": ["ud"],
+    "prefix": ["ud", "updateDocument" ],
     "body": [
       "let response = await sdk.database.updateDocument('${1: COLLECTION_ID}',`${2: DOCUMENT_ID}`, data: {${3: DATA}});"
     ],
@@ -25,7 +25,7 @@
   },
 
   "Delete Document": {
-    "prefix": ["dd"],
+    "prefix": ["dd","deleteDocument"],
     "body": [
       "await sdk.database.deleteDocument('${1: COLLECTION_ID}', '${2: DOCUMENT_ID}');"
     ],

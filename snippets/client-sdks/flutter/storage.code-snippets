@@ -1,59 +1,79 @@
 {
   "Initialize Storage": {
-    "prefix": ["as","storage"],
-    "body": ["final Storage storage = Storage(client);"],
+    "prefix": ["afs","fstorage"],
+    "body": ["Storage storage = Storage(client);"],
     "description": "Create a Storage object and initialize it."
   },
 
   "Create File": {
-    "prefix": ["af","createFile"],
+    "prefix": ["aff","fcreateFile"],
     "body": [
-      "final response = await storage.createFile(fileId: '$1', file: await MultipartFile.fromPath('$2','$3');"
+      "Future result = storage.createFile(",
+      "bucketId: '${1: BUCKET_ID}',",
+      "fileId: '${2: FILE_ID}',",
+      "file: ${3: FILE}" ,
+      "filename: '${4: FILE_NAME}'),",
+      ");"
     ],
     "description": "Create a new file. The user who creates the file will automatically be assigned to read and write access unless he has passed custom values for read and write arguments."
   },
 
   "List Files": {
-    "prefix": ["alf","listFiles"],
-    "body": ["final response = await storage.listFiles();"],
+    "prefix": ["aflf","flistFiles"],
+    "body": [
+      "Future result = storage.listFiles(",
+       "bucketId: '${1: BUCKET_ID}'",
+       ");"
+      ],
     "description": "Get a list of all the user files. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's files."
   },
 
   "Get File": {
-    "prefix": ["agf","getFile"],
-    "body": ["final response = await storage.getFile(fileId: '$1');"],
+    "prefix": ["afgf","fgetFile"],
+    "body": [
+      "Future result = storage.getFile(",
+    "bucketId: '[BUCKET_ID]',",
+    "fileId: '[FILE_ID]',",
+   " );"
+],
     "description": "Get a file by its unique ID."
   },
 
   "Get File Preview": {
-    "prefix": ["afp","getFilePreview"],
-    "body": ["final response = await storage.getFilePreview(fileId: '$1');"],
+    "prefix": ["affp","fgetFilePreview"],
+    "body": ["await storage.getFilePreview(fileId: '${1: FILE_ID}');"],
     "description": "Get a file preview by its unique ID."
   },
 
   "Get File for Download": {
-    "prefix": ["afd","getFileForDownload"],
-    "body": ["final response = await storage.getFileDownload(fileId: '$1');"],
+    "prefix": ["affd","fgetFileForDownload"],
+    "body": ["await storage.getFileDownload(fileId: '${1: FILE_ID}');"],
     "description": "Get a file for download by its unique ID."
   },
 
   "Get File for View": {
-    "prefix": ["afv","getFileForView"],
-    "body": ["final response = await storage.getFileView(fileId: '$1');"],
+    "prefix": ["affv","fgetFileForView"],
+    "body": ["await storage.getFileView(fileId: '${1: FILE_ID}');"],
     "description": "Get a file content by its unique ID. This endpoint is similar to the download method but returns with no 'Content-Disposition: attachment' header."
   },
 
   "Update File": {
-    "prefix": ["auf","updateFile"],
+    "prefix": ["afuf","fupdateFile"],
     "body": [
-      "final response = await storage.updateFile(fileId: '$1', read: [$2],write:[]);"
+      " Future result = storage.updateFile(",
+      "bucketId: '${1: BUCKET_ID}',",
+      "fileId: '${2: FILE_ID}',",
+     ");"
     ],
     "description": "Update a file by its unique ID. Only users with write permissions have access to update this resource."
   },
 
   "Delete File": {
-    "prefix": ["adf","deleteFile"],
-    "body": ["await storage.deleteFile(fileId: '$1');"],
+    "prefix": ["afdf","fdeleteFile"],
+    "body": [ " Future result = storage.deleteFile(",
+      "bucketId: '${1: BUCKET_ID}',",
+      "fileId: '${2: FILE_ID}',",
+     ");"],
     "description": "Delete a file by its unique ID. Only users with write permissions have access to delete this resource."
   }
 }
