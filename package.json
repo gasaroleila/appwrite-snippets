@@ -3,7 +3,7 @@
   "displayName": "Appwrite Snippets",
   "description": "Appwrite Snippets is a cool collection of snippets commonly used in Appwrite APIs ",
   "version": "0.0.1",
-  "icon": "logo.png",
+  "icon": "images/logo.png",
   "publisher": "DuoDevs",
   "engines": {
     "vscode": "^1.64.0"
