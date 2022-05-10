@@ -1,6 +1,6 @@
 {
   "Create account": {
-    "prefix": ["afca", "flutterCreateAccount"],
+    "prefix": ["afca", "fCreateAccount"],
     "body": [
       "Future result = account.create(",
       "userId: '${1:USER_ID}',",
@@ -8,14 +8,14 @@
       "password: '${3: USER_PASSWORD}',",
       ");",
     ],
-    "description": "Create a new Account"
+    "description": "Create a new Account in flutter"
   },
 
   "Create account Session": {
     "prefix": [
       "afas",
-      "createAccountSession",
-      "createSession",
+      "fcreateAccountSession",
+      "fcreateSession",
     ],
     "body": [
         "Future session = account.createSession(",
@@ -27,7 +27,7 @@
   },
 
   "Create account Session with OAuth2": {
-    "prefix": ["afaso","accountSessionOAuth2"],
+    "prefix": ["afaso","faccountSessionOAuth2"],
     "body": [
       "Future result = account.createOAuth2Session(",
       "provider: '${1: OAUTH2_PROVIDER}',",
@@ -39,9 +39,9 @@
   "Create Magic Url session": {
     "prefix": [
       "afmus",
-      "createSessionAccount",
-      "magicUrl",
-      "mgURLSession"
+      "fcreateSessionAccount",
+      "fmagicUrl",
+      "fmgURLSession"
     ],
     "body": [
         "Future session = account.createMagicURLSession(",
@@ -52,7 +52,7 @@
     "description": "Create a new account session with Magic Url"
   },
   "Create Magic URL session (confirmation)": {
-    "prefix": ["afmusc", "confirmMagicUrl", "mgURLSessionConfirmation"],
+    "prefix": ["afmusc", "fconfirmMagicUrl", "mgURLSessionConfirmation"],
     "body": [
         "Future result = account.createMagicURLSession(",
         "userId: '${1: USER_ID}',",
@@ -63,49 +63,49 @@
   },
 
   "Create Anonymous session": {
-    "prefix": ["afas", "AnonymousSession", "createAnonymousSession"],
+    "prefix": ["afas", "fAnonymousSession", "createAnonymousSession"],
     "body": ["Future result = account.createAnonymousSession();"],
     "description": "Create a new Anonymous Session"
   },
 
   "Create Account JWT": {
-    "prefix": ["afajwt", "aaj"],
+    "prefix": ["afajwt"],
     "body": ["Future result = await account.createJWT();"],
     "description": "Create a new Account using JWT"
   },
 
   "Get Account": {
-    "prefix": ["afgc","getAccount"],
+    "prefix": ["afgc","fgetAccount"],
     "body": ["Future result = account.get();"],
     "description": "Get currently logged in user data as JSON object."
   },
 
   "Get Account Preferences": {
-    "prefix": ["afap","getAccountPreferences"],
+    "prefix": ["afap","fgetAccountPreferences"],
     "body": ["Future result = account.getPrefs();"],
     "description": "Get currently logged in user preferences as a key-value object."
   },
 
   "Get Account Sessions": {
-    "prefix": ["afas","getAccountSession"],
+    "prefix": ["afas","fgetAccountSession"],
     "body": ["Future result = account.getSessions();"],
     "description": "Get currently logged in user list of active sessions across different devices."
   },
 
   "Get Account Logs": {
-    "prefix": ["afal","getAccountLogs"],
+    "prefix": ["afal","fgetAccountLogs"],
     "body": ["Future result = account.getLogs();"],
     "description": "Get currently logged in user list of latest security activity logs. Each log returns user IP address, location and date and time of log."
   },
 
   "Get Session by ID": {
-    "prefix": ["afsbi","getSessionId", "getSessionbyId"],
+    "prefix": ["afsbi","fgetSessionId", "getSessionbyId"],
     "body": ["Future result = account.getSesssion(sessionId: '${1: SESSION_ID}');"],
     "description": "Use this endpoint to get a logged in user's session using a Session ID. Inputting 'current' will return the current session being used."
   },
 
   "Update Account Name": {
-    "prefix": ["afuan","updateName", "upName"],
+    "prefix": ["afuan","fupdateName", "upName"],
     "body": ["Future result = account.updateName(name: '${1: NAME}');"],
     "description": "Update currently logged in user account name."
   },
