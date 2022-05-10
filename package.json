@@ -2,7 +2,7 @@
   "name": "appwrite-snippets",
   "displayName": "Appwrite Snippets",
   "description": "Appwrite Snippets is a cool collection of snippets commonly used in Appwrite APIs ",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "icon": "images/logo.png",
   "publisher": "DuoDevs",
   "engines": {
